@@ -155,12 +155,10 @@ const pokemon = [
 
 module.exports = pokemon
 
-// // Exercise 1
-console.dir(pokemon, { maxArrayLength: null })
-
-// Exercise 4
-for (let i = 0; i > pokemon.length; i++) {
-  if (pokemon[i].starter === true) {
-    game.party.push(pokemon[i])
+let pokemonType = []
+for (i = 0; i < pokemon.length; i++) {
+  if (pokemon[i].type !== pokemon[i + 1].type) {
+    pokemonType.push(pokemon[i].type)
   }
 }
+console.log(pokemonType)

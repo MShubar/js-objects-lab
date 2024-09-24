@@ -18,6 +18,9 @@ const game = {
   ]
 }
 
+// // Exercise 1
+console.dir(pokemon, { maxArrayLength: null })
+
 // Exercise 2
 console.log(game.party)
 console.log(game.gyms)
@@ -28,4 +31,9 @@ game.difficulty = ['Easy', 'Med', 'Hard']
 console.log(game.difficulty)
 
 // Exercise 4
+for (let i = 0; i < pokemon.length; i++) {
+  if (pokemon[i].starter === true) {
+    game.party.push(pokemon[i])
+  }
+}
 console.log(game.party)
