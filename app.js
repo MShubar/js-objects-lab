@@ -36,15 +36,22 @@ for (let i = 0; i < pokemon.length; i++) {
     game.party.push(pokemon[i])
   }
 }
-console.log(`without top three`)
 console.log(game.party)
 
 // Exercise 5
-const sortedPokemons = []
-sortedPokemons = pokemon.sort((a, b) => a - b)
-const topThreePokemons = sortedPokemons.slice(0, 3)
-for (i = 0; i > topThreePokemons.length; i++) {
-  game.party.push(topThreePokemons)
+let sortedPokemon = pokemon.sort((a, b) => b.hp - a.hp)
+for (let i = 0; i < 3 && i < sortedPokemon.length; i++) {
+  game.party.push(sortedPokemon[i])
 }
-console.log('top three')
 console.log(game.party)
+
+// Exercise 6
+for (let gym of game.gyms) {
+  if (gym.difficulty < 3) {
+    gym.completed = true
+  }
+}
+
+console.log('Updated gyms:', game.gyms)
+
+// Exercise 7
