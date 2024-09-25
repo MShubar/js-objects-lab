@@ -36,4 +36,15 @@ for (let i = 0; i < pokemon.length; i++) {
     game.party.push(pokemon[i])
   }
 }
+console.log(`without top three`)
+console.log(game.party)
+
+// Exercise 5
+const sortedPokemons = []
+sortedPokemons = pokemon.sort((a, b) => a - b)
+const topThreePokemons = sortedPokemons.slice(0, 3)
+for (i = 0; i > topThreePokemons.length; i++) {
+  game.party.push(topThreePokemons)
+}
+console.log('top three')
 console.log(game.party)

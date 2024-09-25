@@ -155,10 +155,10 @@ const pokemon = [
 
 module.exports = pokemon
 
-let pokemonType = []
-for (i = 0; i < pokemon.length; i++) {
-  if (pokemon[i].type !== pokemon[i + 1].type) {
-    pokemonType.push(pokemon[i].type)
-  }
-}
-console.log(pokemonType)
+// let pokemonType = []
+// for (i = 0; i < pokemon.length; i++) {
+//   if (pokemon[i].type !== pokemon[i + 1].type) {
+//     pokemonType.push(pokemon[i].type)
+//   }
+// }
+// console.log(pokemonType)
