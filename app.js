@@ -85,18 +85,20 @@ for (let i = 0; i < pokemon.length; i++) {
 console.log('Exercise 9: ', starterPokemon)
 
 // Exercise 10
+
 game.catchPokemon = function (pokemonObj) {
-  this.party.push(pokemonObj)
+  game.party.push(pokemonObj)
 }
 game.catchPokemon(pokemon[5])
 console.log('Exercise 10: ', game.party)
 
 //Exercise 11
 game.catchPokemon = function (pokemonObj) {
-  this.party.push(pokemonObj)
-  let pokeballItem = this.items.find((item) => item.name === 'pokeball')
-  if (pokeballItem) {
-    pokeballItem.quantity--
+  game.party.push(pokemonObj)
+  for (i = 0; i < game.items.length; i++) {
+    if (game.items[i].name === 'pokeball') {
+      game.items[i].quantity -= 1
+    }
   }
 }
 game.catchPokemon(pokemon[3])
